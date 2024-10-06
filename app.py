@@ -87,7 +87,10 @@ def predict(input_data: CropInput):
     # Append descriptions of predicted crops
     for crop in predicted_crops:
         final_text += f"{crop.capitalize()} can be cultivated in this area.\n {crop_descriptions[crop]}\n\n"
-
+    
+    if final_text == '':
+        final_text = 'Unfortunately,\n\nThere are two possibilities:\n\n 1. Your data is incorrect (negative factual)\n\n 2. Your area is unstable for most of the crops'
+    print(final_text) #
     return {"predicted_crops": final_text}
 
 
