@@ -51,7 +51,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://farmz-gx1n.onrender.com/"],  # React's port
+    allow_origins=["https://farmz-gx1n.onrender.com"],  # React's port
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
